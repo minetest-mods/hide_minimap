@@ -6,8 +6,11 @@
   ],
   "homepage": "http://example.com/",
   "forum": "https://forum.minetest.net/viewtopic.php?f=9&t=13038",
+  "screenshots": [],
   "authors": [
     "Amaz"
   ],
   "license": "WTFPL",
+  "dependencies": { },
+  "ignore": [ ]
 }
