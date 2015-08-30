@@ -10,7 +10,7 @@
   "authors": [
     "Amaz"
   ],
-  "license": "WTFPL",
+  "license": "MIT",
   "dependencies": { },
   "ignore": [ ]
 }
