@@ -8,6 +8,7 @@ if not minetest.setting_getbool("hide_minimap_unconditional") then
 	minetest.register_globalstep(function(dtime)
 		time = time + dtime
 		if time > 20 then
+			time = 0
 			for _,player in pairs(minetest.get_connected_players()) do
 				local name = player:get_player_name()
 				local privs = minetest.get_player_privs(name)
