@@ -1,0 +1,12 @@
+{
+  "$schema": "https://content.luanti.org/api/cdb_schema/",
+  "title": "Hide Minimap",
+  "tags": ["hud"],
+  "type": "MOD",
+  "dev_state": "MAINTENANCE_ONLY",
+  "ai_disclosure": "NONE",
+  "license": "MIT",
+  "repo": "https://github.com/minetest-mods/hide_minimap",
+  "issue_tracker": "https://github.com/minetest-mods/hide_minimap/issues/new/choose/",
+  "short_description": "A mod which requires players to have a privilege to use the minimap"
+}
