@@ -9,7 +9,7 @@ where the chief purpose is survival, it serves a point.
 
 ## Dependencies
 
-- Luanti/Minetest v4.10
+- Luanti/Minetest v5.0
 
 ## License
 
