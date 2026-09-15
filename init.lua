@@ -1,4 +1,4 @@
-if not core.setting_getbool("hide_minimap_unconditional") then
+if not core.settings:get_bool("hide_minimap_unconditional", false) then
 	core.register_privilege("minimap", {
 		description = "Allows players to use the minimap",
 		give_to_singleplayer = false,
