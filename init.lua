@@ -1,27 +1,27 @@
-if not minetest.setting_getbool("hide_minimap_unconditional") then
-	minetest.register_privilege("minimap", {
+if not core.settings:get_bool("hide_minimap_unconditional", false) then
+	core.register_privilege("minimap", {
 		description = "Allows players to use the minimap",
 		give_to_singleplayer = false,
 	})
 
 	local time = 0
-	minetest.register_globalstep(function(dtime)
+	core.register_globalstep(function(dtime)
 		time = time + dtime
 		if time > 20 then
 			time = 0
-			for _,player in pairs(minetest.get_connected_players()) do
+			for _, player in pairs(core.get_connected_players()) do
 				local name = player:get_player_name()
-				local privs = minetest.get_player_privs(name)
+				local privs = core.get_player_privs(name)
 				if not privs.minimap then
-					player:hud_set_flags({minimap = false})
+					player:hud_set_flags({ minimap = false })
 				elseif privs.minimap == true then
-					player:hud_set_flags({minimap = true})
+					player:hud_set_flags({ minimap = true })
 				end
 			end
 		end
 	end)
 else
-	minetest.register_on_joinplayer(function(player)
-		player:hud_set_flags({minimap = false})
+	core.register_on_joinplayer(function(player)
+		player:hud_set_flags({ minimap = false })
 	end)
 end
